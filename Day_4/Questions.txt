@@ -40,28 +40,6 @@ Area is 3.14
 4. Write a program to illustrate that Classes cannot be used for multiple Inheritance.
 5. Create a class named Shape with a method that prints "This is a shape". Create another class named Polygon inheriting the Shape class with the same method that prints "Polygon is a shape". Create two other classes named Rectangle and Triangle having the same method which prints "Rectangle is a polygon" and "Triangle is a polygon" respectively. Again, make another class named Square having the same method which prints "Square is a rectangle".
 Now, try calling the method by the object of each of these classes.
-6. Design a simple inventory system in Java using object-oriented principles that demonstrates the use of static variables and object containment.
-Create two classes:
----Store
----Product
-Requirements:
-The Store class should have:
-a. storeName and storeLocation as static variables since they are common to all products in the store.
-b. A static method setStoreDetails(String name, String location) to initialize the static variables.
-c. A static method displayStoreDetails() to print store details.
-d. A list to maintain multiple Product objects (i.e., the store contains many products).
-e. A method addProduct(Product product) to add products to the store.
-f. A method displayAllProducts() to display details of all products.
-The Product class should have:
-a. Product ID, name, price, and quantity as instance variables.
-b. A constructor to initialize these fields.
-c. A method displayProduct() to show product details.
-Task: Implement the above classes and demonstrate their use in the main() method by:
-a. Setting store details once.
-b. Creating multiple product objects.
-c. Adding them to the store.
-d. Displaying store and product information.
-Also Check how many .class files are generated.
 
 6. Design and implement a custom Java class named MyString that mimics the behavior of Java’s built-in String class. Your class should store character data internally (e.g., using a char[] or String as input) and should provide the following string methods,
 1. int length() – Returns the number of characters.
@@ -76,7 +54,8 @@ Also Check how many .class files are generated.
 10. MyString replace(char oldChar, char newChar) – Replaces all occurrences of a character.
 * Implement proper constructors, including one that takes a char[] or String as input.
 * Avoid using any built-in String methods to perform the operations internally.
-* Write a main method to demonstrate the working of your MyString class.                                                                                                                                                                                                             7. Design a calculator application using Java Inheritance.
+* Write a main method to demonstrate the working of your MyString class.                                                                                                                                                                                                             
+7. Design a calculator application using Java Inheritance.
 ‌
 Create the following class hierarchy:
 ‌
