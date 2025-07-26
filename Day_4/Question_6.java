@@ -69,6 +69,7 @@ public class Question_6 {
         System.out.println("Enter new character:");
         char newCh = scanner.nextLine().charAt(0);
         string.replace(oldCh, newCh);
+        
         System.out.println("After replace: ");
         for (int i = 0; i < string.length(); i++) {
             System.out.print(string.charAt(i));
@@ -104,11 +105,11 @@ class MyString {
                 return false;
             }
             return true;
-        }
+    }
         
-        public char[] toCharArray() {
-            return this.data;
-        }
+    public char[] toCharArray() {
+        return this.data;
+    }
 
     public String toUpperCase() {
         char[] upperCaseData = new char[data.length];

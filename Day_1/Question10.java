@@ -1,3 +1,5 @@
+// 10. Write a program to check whether the object is an instance of a particular class?
+
 public class Question10 {
     public static void main(String[] args) {
         Question10 mainObj = new Question10();

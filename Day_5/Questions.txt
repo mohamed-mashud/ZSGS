@@ -1,0 +1,49 @@
+*Day-5 Assignment Questions:*
+1. Design a Java program to maintain hospital medical records.
+Create a base class named MedicalRecord that includes common attributes:
+--- recordId, patientName, dateOfVisit, and diagnosis.
+--- inputRecordDetails() – to input common record information.
+--- override displayRecord() – to display the common record details.
+‌
+Create a subclass InPatientRecord that extends MedicalRecord and adds:
+--- roomNumber, numberOfDaysAdmitted, roomCharges.
+--- calculateTotalCharges() – to compute and return total inpatient cost.
+--- displayRecord() – to include all details, including total charges.
+‌
+Create another subclass OutPatientRecord that extends MedicalRecord and adds:
+--- doctorName, consultationFee.
+--- override displayRecord() – to include all outpatient-specific details.
+Include all the necessary classes if its needed.
+‌
+2. Can we override private method, constructor, static method, final method? Illustrate with an example.
+‌
+3. Create a Java application to manage employees in a company. Define a base class Employee with a method calculateSalary(). Then create two subclasses FullTimeEmployee and PartTimeEmployee that override calculateSalary() method based on their working type.
+‌
+4. Design a Java Ticket Booking System using polymorphism where Bus, Train, and Flight tickets share a common method but implement booking differently.
+
+
+// Junk code 
+
+abstract class Ticket {   
+    abstract boolean bookTicket();
+}
+
+class Bus extends Ticket {
+    
+    @Override
+    public boolean bookTicket() {
+
+    } 
+}
+class Train extends Ticket {
+    @Override
+    public boolean bookTicket() {
+        
+    }
+}
+class Flight extends Ticket {
+    @Override
+    public boolean bookTicket() {
+        
+    }
+}

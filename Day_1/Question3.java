@@ -2,7 +2,6 @@
 
 public class Question3 {
     public static void main(String[] args) {
-
         // generates a random double value within 0.0 to 1.0 
         // multiply it by 100 gets the values between 0 to 100
         // converting it to int after that
