@@ -36,15 +36,12 @@ public class Question_2 {
     }
 
     static String columnTitle(int number) {
-        StringBuilder result = new StringBuilder();
-
-        while (number > 0) {
-            number--; 
-            int remainder = number % 26;
-            result.append((char) ('A' + remainder));
+        String result = "";
+        while(number > 0) {
+            number--;
+            result = (char) (number % 26 + 'A') + result;
             number /= 26;
         }
-
-        return result.reverse().toString();
+        return result;
     }
 }

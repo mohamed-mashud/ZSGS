@@ -20,17 +20,19 @@ public class Question_8 {
     }
 
     static void countPeople(int[] ages) {
-        int under18 = 0, between18and60 = 0, above60 = 0;
+        int under_18 = 0, between_18_and_60 = 0, above_60 = 0;
+
         for(int age : ages) {
             if(age < 18)
-                under18++;
+                under_18++;
             else if(age >= 18 && age <= 60)
-                between18and60++;
+                between_18_and_60++;
             else
-                above60++;
+                above_60++;
         }
-        System.out.println("Number of people under 18: " + under18);
-        System.out.println("Number of people between 18 and 60: " + between18and60);
-        System.out.println("Number of people above 60: " + above60);
+        
+        System.out.println("Number of people under 18: " + under_18);
+        System.out.println("Number of people between 18 and 60: " + between_18_and_60);
+        System.out.println("Number of people above 60: " + above_60);
     }
 }

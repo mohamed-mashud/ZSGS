@@ -58,3 +58,19 @@ class Student {
         return (double) getTotalMarks() / marks.length;
     }
 }
+
+/*
+ * 
+ * Example inputs 
+101 87 92 78
+102 69 75 80
+103 90 88 94
+104 55 67 60
+105 78 82 79
+106 99 95 93
+107 84 73 81
+108 60 62 58
+109 89 91 90
+110 70 80 75
+ * 
+ */

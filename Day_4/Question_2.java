@@ -12,6 +12,9 @@ public class Question_2 {
     public static void main(String[] args) {
         ThreeD point_1 = new ThreeD(0, 0, 0);
         ThreeD point_2 = new ThreeD(1,1,1);
+        System.out.println(
+            "Distance between point_1 and point_2 is: " + point_1.distanceBetweenPoints(point_2)
+        );
     }    
 }
 
@@ -36,10 +39,10 @@ class ThreeD extends TwoD {
         this.z = z;
     }
 
-    public double distanceBetweenPoints(ThreeD a, ThreeD b) {
-        int x1 = a.x, x2 = b.x,
-            y1 = a.y, y2 = b.y,
-            z1 = a.z, z2 = b.z;
+    public double distanceBetweenPoints(ThreeD other) {
+        int x1 = this.x, x2 = other.x,
+            y1 = this.y, y2 = other.y,
+            z1 = this.z, z2 = other.z;
         
         return Math.sqrt(
             Math.pow(x1 - x2, 2) +

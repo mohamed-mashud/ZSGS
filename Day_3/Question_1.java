@@ -5,11 +5,10 @@
 public class Question_1 {
     public static void main(String[] args) {
         String name = "John";
-        
-        System.out.println("Enter rollno :");
         int rollNo = 2;
 
         Student student = new Student(name, rollNo);
+        student.display();
     }    
 }
 
@@ -20,5 +19,12 @@ class Student {
     public Student(String name, int rollNo) {
         this.name = name;
         this.rollNo = rollNo;
+    }
+
+    public void display() {
+        System.out.println(
+            "Name: " + name + "\n" +
+            "Roll No: " + rollNo
+        );
     }
 }

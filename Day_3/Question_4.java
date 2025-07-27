@@ -9,7 +9,7 @@ public class Question_4 {
         Vehicle vehicle1 = new Vehicle(1, "Toyota", 20000);
         Vehicle vehicle2 = new Vehicle(2, "Honda", 25000);
 
-        System.out.println(vehicle1.getVehicleCount());
+        System.out.println(Vehicle.getVehicleCount());
     }
 }
 
@@ -26,7 +26,7 @@ class Vehicle {
         vehicleCount++;
     }
 
-    public int getVehicleCount() {
+    public static int getVehicleCount() {
         return vehicleCount;
     }
 }

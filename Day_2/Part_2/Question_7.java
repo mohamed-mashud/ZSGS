@@ -14,7 +14,10 @@ public class Question_7 {
         for (int i = 0; i < n; i++) 
             weights[i] = scanner.nextInt();
 
+        System.out.println("before sorting: ");
+        printArray(weights);
         sortInDesc(weights);
+        System.out.println("after sorting: ");
         printArray(weights);
 
         scanner.close();
@@ -22,12 +25,11 @@ public class Question_7 {
 
     static void sortInDesc(int[] nums) {
         int n = nums.length;
-        for(int i = 0; i < n - 1; i++) {
-            int max_indx = 0;
-            for(int j = i + 1; j < n; j++) {
-                if(nums[max_indx] < nums[j])
+        for (int i = 0; i < n - 1; i++) {
+            int max_indx = i;
+            for (int j = i + 1; j < n; j++) 
+                if (nums[j] > nums[max_indx]) 
                     max_indx = j;
-            }
             swap(nums, i, max_indx);
         }
     }

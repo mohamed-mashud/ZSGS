@@ -12,7 +12,7 @@ public class Question_1 {
 
         int min_of_3_numbers = number_1;
 
-        if(number_1 < number_2 && number_1 < number_3)  min_of_3_numbers = number_1;
+        if(number_1 < number_2 && number_1 < number_3)       min_of_3_numbers = number_1;
         else if(number_2 < number_1 && number_2 < number_3)  min_of_3_numbers = number_2;
         else min_of_3_numbers = number_3;
 

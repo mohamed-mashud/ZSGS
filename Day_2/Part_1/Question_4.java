@@ -2,9 +2,9 @@
 // do...while loop?
 // a) Pascal Triangle
 // b) ZOHO
-// CORP
-// ORAT
-// IONS
+//    CORP
+//    ORAT
+//    IONS
 
 import java.util.Scanner;
 

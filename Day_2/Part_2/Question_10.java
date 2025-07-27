@@ -37,7 +37,7 @@ public class Question_10 {
         System.out.println("Col-wise sum of matrix of size m x n : ");
         printArr(col_wise_sum);
 
-        transpose(arr);
+        int[][] transpose_arr = transpose(arr);
         printMatrix(arr);
         scanner.close();
     }    
@@ -84,10 +84,10 @@ public class Question_10 {
 
     static void printArr(int[] arr) {
         for(int i : arr)    
-            System.out.print(i);
+            System.out.print(i + " ");
     }
 
-    static void transpose(int[][] arr) {
+    static int[][] transpose(int[][] arr) {
         int[][] transpose_arr = new int[arr[0].length][arr.length];
 
         for(int i = 0; i < arr.length; i++) {
@@ -95,6 +95,7 @@ public class Question_10 {
                 transpose_arr[j][i] = arr[i][j];
             }
         }
+        return transpose_arr;
     }
 
 }

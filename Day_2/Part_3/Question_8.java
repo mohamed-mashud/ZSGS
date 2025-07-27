@@ -30,19 +30,22 @@ public class Question_8 {
     }
 
     static boolean isCaptilized(String word) {
-        boolean isAllCapitals = true;
-        boolean isAllNotCapitals = true;
-        boolean isOnlyFirstCapital = true;
-        boolean isAnyCapital = false;
-        for (int i = 0; i < word.length(); i++) {
-            char c = word.charAt(i);
-            if (Character.isUpperCase(c)) {
-                isAllNotCapitals = false;
-                isOnlyFirstCapital = false;
-                isAnyCapital = true;
-            } else 
-                isAllCapitals = false;
-        }
-        return (isAllCapitals || isAllNotCapitals || (isOnlyFirstCapital && isAnyCapital));   
+        int count = 0;
+        int n = word.length();
+        if(n == 1)  return true;
+
+        for(int i = 0; i < n; i++) {
+            char ch = word.charAt(i);
+
+            if(isUpperCase(ch))
+                count++;
+        } 
+
+        return (count == 1 && isUpperCase(word.charAt(0))) || 
+                (count == 0 || count == n);
+    }
+
+    static boolean isUpperCase(char ch) {
+        return 'A' <= ch && ch <= 'Z';
     }
 }

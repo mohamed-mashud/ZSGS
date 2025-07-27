@@ -17,8 +17,8 @@ public class Question_1 {
                 sumOfOdds += numbers[i];
             }
         }
-        scanner.close();
-
+        
         System.out.println("Sum of all odd numbers is: " + sumOfOdds);
+        scanner.close();
     }
 }
