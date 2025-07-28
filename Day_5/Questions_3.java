@@ -2,7 +2,7 @@
 
 public class Questions_3 {
     public static void main(String[] args) {
-        FullTimeEmployee fte = new FullTimeEmployee("Full bro", "123456789", "random+zs@gmail.com", 91120);
+        FullTimeEmployee fte = new FullTimeEmployee("Full bro", "123456789", "random+zs@gmail.com", 91_120);
 
         PartTimeEmployee pte = new PartTimeEmployee("Part bro", "987654321", "partime+zs@gmail.com", 1000, 3);
 
@@ -22,7 +22,14 @@ class Employee {
         this.email = email;
     }
 
-    public void calculateSalary() { }
+    public void calculateSalary() {}
+
+    @Override
+    public String toString() {
+        return "\nName: " + name +
+                "\nphone: " + phone +
+                "\nemail: " + email;
+    }
 }
 
 class PartTimeEmployee extends Employee {

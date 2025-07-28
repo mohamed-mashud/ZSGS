@@ -46,7 +46,7 @@ public class Question_3 {
 
             int j = 0;
             while (j <= i) {
-                System.out.printf("%3d",num++);
+                System.out.printf("%d",num++);
                 j++;
             }
             System.out.println();

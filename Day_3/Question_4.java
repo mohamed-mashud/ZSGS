@@ -9,7 +9,10 @@ public class Question_4 {
         Vehicle vehicle1 = new Vehicle(1, "Toyota", 20000);
         Vehicle vehicle2 = new Vehicle(2, "Honda", 25000);
 
-        System.out.println(Vehicle.getVehicleCount());
+        System.out.println("Total Vehicle count" + Vehicle.getVehicleCount());
+        System.out.println(
+            vehicle1.toString() + "\n" + vehicle2.toString()
+        );
     }
 }
 
@@ -28,5 +31,12 @@ class Vehicle {
 
     public static int getVehicleCount() {
         return vehicleCount;
+    }
+
+    @Override
+    public String toString() {
+        return "\nVehicle Id: " + this.vehicleId +
+                "\nBrand Name: " + this.brandName +
+                "\nPrice: " + this.price;
     }
 }

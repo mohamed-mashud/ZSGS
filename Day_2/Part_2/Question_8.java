@@ -25,7 +25,7 @@ public class Question_8 {
         for(int age : ages) {
             if(age < 18)
                 under_18++;
-            else if(age >= 18 && age <= 60)
+            else if(age <= 60)
                 between_18_and_60++;
             else
                 above_60++;

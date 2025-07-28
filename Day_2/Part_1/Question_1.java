@@ -10,11 +10,10 @@ public class Question_1 {
         int number_2 = (int) (Math.random() * 100);
         int number_3 = (int) (Math.random() * 100);
 
-        int min_of_3_numbers = number_1;
+        int min_of_3_numbers = number_3;
 
         if(number_1 < number_2 && number_1 < number_3)       min_of_3_numbers = number_1;
         else if(number_2 < number_1 && number_2 < number_3)  min_of_3_numbers = number_2;
-        else min_of_3_numbers = number_3;
 
         System.out.println("Min of three numbers is " + min_of_3_numbers);
     } 
