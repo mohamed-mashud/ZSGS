@@ -1,29 +1,28 @@
-// 1. All the banks operating in India are controlled by RBI. RBI has set a well defined guideline (e.g. minimum interest rate, minimum balance allowed, maximum withdrawal limit etc) which all banks must follow. For example, suppose RBI has set minimum interest rate applicable to a saving bank account to be 4% annually; however, banks are free to use 4% interest rate or to set any rates above it.
 // Write a program to implement bank functionality in the above scenario. Note: Create few classes namely Customer, Account, RBI (Base Class) and few derived classes (SBI, ICICI, PNB etc). Assume and implement required member variables and methods in each class.
-/*// Hint:
-// Class Customer
+/*  Hint:
+// class Customer
 // {
 // //Personal Details ...
 // // Few functions ...
 // }
-// Class Account
+// class Account
 // {
 // // Account Detail ...
 // // Few functions ...
 // }
-// Class RBI
+// abstract class RBI
 // {
 // Customer c; //hasA relationship
 // Account a; //hasA relationship
 // ..
-// Public double getInterestRate() { }
-// Public double getWithdrawalLimit() { }
+// public abstract double getInterestRate();
+// public abstract double getWithdrawalLimit();
 // }
-// Class SBI extends public RBI
+// class SBI extends RBI
 // {
 // //Use RBI functionality or define own functionality.
 // }
-// Class ICICI extends public RBI
+// class ICICI extends RBI
 // {
 // //Use RBI functionality or define own functionality.
 // }
@@ -56,46 +55,28 @@ public class Question_1 {
     }
 }
 
-class RBI {
+abstract class RBI {
     static final int MIN_INTEREST_RATE = 4;
     static final double MIN_BALANCE_ALLOWED = 1_000;
     static final double MAX_WITHDRAWL_LIMIT = 40_000;
-    
-    private final List<Account> RBI_ACCOUNTS;
 
-    public RBI() {
-        RBI_ACCOUNTS = new ArrayList<>();
-    }
-
-    public double getInterestRate() {
-        return MIN_INTEREST_RATE;
-    }
-
-    public double getWithdrawalLimit() {
-        return MAX_WITHDRAWL_LIMIT;
-    }
-
-    public double getMinBalance() {
-        return MIN_BALANCE_ALLOWED;
-    }
-
-    public void addAccount(Account account) {
-        RBI_ACCOUNTS.add(account);
-    }
+    public abstract double getInterestRate();
+    public abstract double getWithdrawalLimit();
+    public abstract double getMinBalance();
+    public abstract void addAccount(Account account);
 
     public void transfer(Account payer, Account payee, double amount) {
         double payerBalance = payer.getBalance();
         double payeeBalance = payee.getBalance();
 
-        if(payerBalance - getMinBalance() >= amount && getWithdrawalLimit() >= amount) {
+        if (payerBalance - getMinBalance() >= amount && getWithdrawalLimit() >= amount) {
             payer.setBalance(payerBalance - amount);
             payee.setBalance(payeeBalance + amount);
-            System.out.println("Transfer successfull");
+            System.out.println("Transfer successful");
         } else {
-            System.out.println("Insufficient balance / below the min balance ");
+            System.out.println("Transfer failed: Insufficient balance or exceeds limits.");
         }
     }
-
 }
 
 class SBI extends RBI {

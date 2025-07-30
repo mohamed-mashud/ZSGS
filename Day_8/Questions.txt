@@ -1,0 +1,15 @@
+1. Illustrates with an example of using Singleton class.
+2. Develop a Java program which illustrates the usage of Comparator Interface.
+3. Develop a Java program which illustrates the usage of Comparable Interface.
+4. Get some strings through the command-line prompt and use an array to store and display them.
+5. Write a program to illustrate the usage of clone() and find out what kind of copy it will make.
+6. Develop a Java program to illustrate pass-by-value.
+7. Develop a Java program to illustrate the usage of toString() method.
+8. Write a Java program to demonstrate the concept of object cloning using the clone() method.
+--->Create a class Student with fields like name, rollNo, and department.
+--->Attempt to clone an object of this class using the clone() method.
+--->Catch and handle the CloneNotSupportedException if thrown.
+***Also find out and explain why the class must implement the Cloneable interface to avoid CloneNotSupportedException.
+-->Your program should clearly illustrate:
+a. What happens if Cloneable is not implemented
+b. How the error is resolved by implementing Cloneable

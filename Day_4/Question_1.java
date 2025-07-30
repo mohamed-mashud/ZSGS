@@ -6,7 +6,7 @@
 
 public class Question_1 {
     public static void main(String[] args) {
-        // Creating objects of Car and Bike classes
+        
         Audi R8 = new Audi(30, 231210, 23210, 2, 3, "Petrol", "Alumninum");
         Ford Mustang = new Ford(30, 231210, 23210, 2, 3, "Petrol", "Alumninum");
 

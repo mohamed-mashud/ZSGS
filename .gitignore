@@ -1,5 +1,5 @@
 .idea/
-
+notes/
 *.class
 *.logs
 .env

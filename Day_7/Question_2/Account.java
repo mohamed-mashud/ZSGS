@@ -12,6 +12,10 @@ class Account {
         this.accountNo = accountNo;
     }
     
+    public Account(String string, String string2, String string3, AccountType current, int i) {
+        //TODO Auto-generated constructor stub
+    }
+
     public double getCreditAmount() {
         return creditAmount;
     }
