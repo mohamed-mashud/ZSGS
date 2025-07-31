@@ -43,6 +43,16 @@ class User {
     public int getId() {
         return id;
     }
+
+    public void setUserName(String name2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setUserName'");
+    }
+
+    public void setPassword(String password) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setPassword'");
+    }
 }
 
 class PaymentGatewaySystem {

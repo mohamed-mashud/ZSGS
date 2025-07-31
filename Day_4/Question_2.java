@@ -10,8 +10,12 @@
 // ‌
 public class Question_2 {
     public static void main(String[] args) {
-        ThreeD point_1 = new ThreeD(0, 0, 0);
-        ThreeD point_2 = new ThreeD(1,1,1);
+        ThreeD point_1 = new ThreeD();
+        point_1.setX(1);
+        point_1.setY(2);
+        point_1.setZ(3);
+        
+        ThreeD point_2 = new ThreeD(4,5,6);
         System.out.println(
             "Distance between point_1 and point_2 is: " + point_1.distanceBetweenPoints(point_2)
         );
@@ -29,6 +33,22 @@ class TwoD {
         this.y = y;
         System.out.println("TwoD constructor with two arguments");
     }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
 }
 
 class ThreeD extends TwoD {
@@ -39,6 +59,8 @@ class ThreeD extends TwoD {
         this.z = z;
     }
 
+    public ThreeD() {}
+    
     public double distanceBetweenPoints(ThreeD other) {
         int x1 = this.x, x2 = other.x,
             y1 = this.y, y2 = other.y,
@@ -50,5 +72,13 @@ class ThreeD extends TwoD {
             Math.pow(z1 - z2, 2) 
         );
         
+    }
+
+    public int getZ() {
+        return z;
+    }
+
+    public void setZ(int z) {
+        this.z = z;
     }
 }

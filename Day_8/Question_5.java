@@ -55,6 +55,11 @@ class User implements Cloneable{
     public void setProducList(ArrayList<Product> producList) {
         this.products = producList;
     }
+
+    public void setPassword(String password) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setPassword'");
+    }
 }
 
 class Product {

@@ -1,7 +1,12 @@
 // 1. Illustrates with an example of using Singleton class.
 
+/*
+ * make the constructor private
+ * create a private static instance of the class
+ * return the instance in a public method
+ */
+
 public class Question_1 {
-    // creating a singleton instance of a class
     public static void main(String[] args) {   
         DBConnection conObject_1 = DBConnection.getDBConnection();
         DBConnection conObject_2 = DBConnection.getDBConnection();

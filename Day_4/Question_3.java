@@ -47,8 +47,8 @@ class Point {
     }
 
     public Point(int x, int y) {
-        x = 0;
-        y = 0;
+        this.x = x;
+        this.y = y;
     }
 
     void setPoint(int x, int y) {

@@ -3,5 +3,5 @@ notes/
 *.class
 *.logs
 .env
-
+out
 *.iml
