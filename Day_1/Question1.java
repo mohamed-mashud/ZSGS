@@ -11,7 +11,7 @@ class Student {
     // final variable
     final String College = "a Random College";
 
-    // instance and local variables
+    // instance variables
     String name, gender;
     int age, studentID;
 
@@ -19,7 +19,9 @@ class Student {
     static int id = 0;
 
     public Student(String name, int age, String gender) {
-        this.studentID = getStudentID();
+        // variables contained within a method are called
+	// local variables
+	this.studentID = getStudentID();
         this.name = name;
         this.age = age;
         this.gender = gender;

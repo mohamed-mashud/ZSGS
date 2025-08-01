@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class Question_9 {
     public static void main(String[] args) {
-        File file = new File("Question.txt");
+        File file = new File("Question_0.java");
         try {
             FileReader fileReader = new FileReader(file);
             fileReader.close();
@@ -20,5 +20,6 @@ public class Question_9 {
         } finally {
             System.out.println("Exiting......");
         }
+        
     }
 }
