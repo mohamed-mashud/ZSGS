@@ -7,7 +7,7 @@
 // in the TwoD class:
 // Add a cout statement to the TwoD default constructor with a message "TwoD default constructor"
 // Add a cout statement to other TwoD constructor with a message "TwoD constructor with two arguments"
-// ‌
+
 public class Question_2 {
     public static void main(String[] args) {
         ThreeD point_1 = new ThreeD();

@@ -45,15 +45,19 @@ public class Question_5 {
                 case 3:
                     System.out.println("Enter product id to search: ");
                     int productIdToSearch = scanner.nextInt();
-                    pis.searchProductByID(productIdToSearch);
+                    if(!pis.searchProductByID(productIdToSearch))
+                        System.out.println("Product id not found");
+                    break;
                 case 4:
                     System.out.println("Enter product id to update: ");
                     int productIdToUpdate = scanner.nextInt();
                     pis.updateProductByID(productIdToUpdate);
+                    break;
                 case 5:
                     System.out.println("Enter product id to delete: ");
                     int productIdToDelete = scanner.nextInt();
                     pis.deleteProductByID(productIdToDelete);
+                    break;
                 case 6:
                     System.exit(0);
                     break;

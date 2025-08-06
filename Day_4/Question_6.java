@@ -136,11 +136,11 @@ class MyString {
     }
 
     public String substring(int start, int end) {
-        String sub = "";
+        StringBuilder sub = new StringBuilder();
         for(int i = start; i < end; i++) {
-            sub += data[i];
+            sub.append(data[i]);
         }
-        return sub;
+        return sub.toString();
     }
 
     public void concat(MyString other) {
@@ -152,7 +152,7 @@ class MyString {
         }
         for(int i = data.length; i < newData.length; i++) {
             newData[i] = other_data[i - data.length];
-        }   
+        }
         data = newData;
     }
     

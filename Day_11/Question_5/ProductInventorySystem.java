@@ -10,15 +10,39 @@ public class ProductInventorySystem {
     private final String FILE_NAME = "products.dat";
     private HashSet<Integer> productIDSet = new HashSet<>();
 
+    public ProductInventorySystem() {
+        File file = new File(FILE_NAME);
+        try {
+            if(!file.exists() && !file.createNewFile()) System.out.println("File cant be created");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     public ArrayList<Product> getAllProducts() {
         ArrayList<Product> products = new ArrayList<>();
+        if(productIDSet.isEmpty())    return products;
+
         try (
                 FileInputStream fis = new FileInputStream(FILE_NAME);
                 ObjectInputStream ois = new ObjectInputStream(fis)
         ) {
             products = (ArrayList<Product>) ois.readObject();
-        } catch (IOException | ClassNotFoundException e) {
-            System.out.println(e.getMessage());
+        } catch (ClassNotFoundException e) {
+            System.out.println(
+                    "ClassNotFoundException caught in retreiving the products" +
+                    e.getMessage()
+            );
+        } catch (IOException e) {
+            System.out.println(
+                    "IOEXCEptions caught in retreiving the products" +
+                    e.getMessage()
+            );
+        } catch (ClassCastException e) {
+            System.out.println(
+                    "IOEXCEptions caught in retreiving the products" +
+                    e.getMessage()
+            );
         }
         return products;
     }
@@ -40,7 +64,7 @@ public class ProductInventorySystem {
                 productToUpdate = product;
                 break;
             }
-
+        scanner.nextLine();
         System.out.println("Enter the product Name: ");
         String name = scanner.nextLine();
 
@@ -88,9 +112,7 @@ public class ProductInventorySystem {
             FileOutputStream fos = new FileOutputStream(FILE_NAME);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
         ) {
-            for(Product product : products) {
-                oos.writeObject(product);
-            }
+            oos.writeObject(products);
             return true;
         } catch (IOException e) {
             e.printStackTrace();
@@ -116,6 +138,7 @@ public class ProductInventorySystem {
     }
 
     public void display(ArrayList<Product> products) {
+        if(products == null)    return;
         for(Product product : products) {
             System.out.println(product);
         }
