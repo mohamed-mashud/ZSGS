@@ -1,3 +1,5 @@
+package Question_2;
+
 import java.io.*;
 import java.nio.file.Files;
 import java.util.Scanner;
@@ -57,11 +59,7 @@ public class FileManipulation{
     }
     
     public int getWordCount(File file, String wordFromUser) {
-        try {
-            IsFileExists(file);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
+        IsFileExists(file);
         String fileContents = readFromAFile(file);
         String[] words = fileContents.split(" ");
         int count = 0;
@@ -73,22 +71,26 @@ public class FileManipulation{
 
     public String readFromAFile(File readFile) {
         StringBuilder sb = new StringBuilder();
+        IsFileExists(readFile);
         try(FileInputStream fis = new FileInputStream(readFile)) {
-            IsFileExists(readFile);
             int data;
             while((data = fis.read()) != -1)
                 sb.append((char) data);
         } catch (IOException e) {
-            System.out.println("Exception in writing into a writeFile " + e.getMessage());
+            System.out.println("Exception in reading a file" + e.getMessage());
         }
         return sb.toString();
     }
 
-    public void IsFileExists(File file) throws IOException  {
-        if(!file.exists()) {
-            System.out.println("File doesnt exist........\nCreating a File..........");
-            if (file.createNewFile())
-                System.out.println("File created sucessfully");
+    public void IsFileExists(File file)  {
+        try {
+            if(!file.exists()) {
+                System.out.println(file.getName() + " doesnt exist........\nCreating " + file.getName() +  "File..........");
+                if (file.createNewFile())
+                    System.out.println("File created sucessfully");
+            }
+        } catch (IOException e) {
+            System.out.println("IOException caught in validaing if the file exists" + file.getName());
         }
     }
 

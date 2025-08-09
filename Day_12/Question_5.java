@@ -14,7 +14,7 @@ public class Question_5 {
         Thread producer = new Thread(() -> {
             for(int i = 0; i < 5; i++) {
                 try {
-                    Thread.sleep(1_000);
+                    Thread.sleep(500);
                 } catch (InterruptedException e) {
                     System.out.println("Interrupted exception in sleep producer" + e.getMessage());
                 }

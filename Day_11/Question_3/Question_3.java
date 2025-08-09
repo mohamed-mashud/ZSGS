@@ -1,4 +1,4 @@
-//3. Write a Java program that reads a file and prints the number of lines, words, and characters.
+package Question_3;//3. Write a Java program that reads a file and prints the number of lines, words, and characters.
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Question_3 {
     public static void main(String[] args) {
-        String fileName = "contentForQuestion_3.txt";
+        String fileName = "Question_3/contentForQuestion_3.txt";
         int lineCount = 0;
         int wordCount = 0;
         int charCount = 0;
@@ -25,7 +25,7 @@ public class Question_3 {
         }
 
         System.out.println(
-                "lineCount : " + lineCount + "charCount : " + charCount + " wordCount :" + wordCount
+                "lineCount : " + lineCount + " charCount : " + charCount + " wordCount :" + wordCount
         );
     }
 }

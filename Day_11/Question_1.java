@@ -9,7 +9,6 @@ public class Question_1 {
         File file = new File("Question_1.java");
         try(FileInputStream fis = new FileInputStream(file)) {
             int data;
-
             while((data = fis.read()) != -1) {
                 System.out.print((char) data);
             }

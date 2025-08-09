@@ -1,4 +1,4 @@
-//2. Write a Menu driven Java program
+package Question_2;//2. Write a Menu driven Java program
 // a) to read content from the user and write it into another writeFile and
 // b) from the writeFile to another writeFile
 // c) to modify the content of a writeFile

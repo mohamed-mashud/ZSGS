@@ -40,7 +40,7 @@ public class ProductInventorySystem {
             );
         } catch (ClassCastException e) {
             System.out.println(
-                    "IOEXCEptions caught in retreiving the products" +
+                    "ClassCastException caught in retreiving the products" +
                     e.getMessage()
             );
         }
